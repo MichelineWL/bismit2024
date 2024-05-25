@@ -1,35 +1,22 @@
 import { Link } from 'react-router-dom';
-import Home from '../pages/Home';
-import Boats from '../pages/Boats';
-import Booked from '../pages/Booked';
-import Map from '../pages/Map';
 
 const Navbar = () => {
-    return(
-        <nav className='navbar shadow-md sticky top-0' style = {{color:'white',}}>
-            <h1 style ={{
-                color: 'white'
-            }} className ='pl-10 text-3xl'>Nyonya Beti's Port</h1>
-            <div>
-                <Link to='/Home'>
-                    <button className='pl-80 hover:font-bold'>Home</button>
+    return (
+        <nav className='shadow-md sticky top-0 bg-white h-20 flex items-center justify-between px-10'>
+            <h1 className='text-2xl font-semibold'>Journalings</h1>
+            <div className='space-x-6'>
+                <Link to='/About'>
+                    <button className='text-lg hover:text-blue-500'>About</button>
                 </Link>
-                <Link to='/Boats'>
-                    <button className='pl-36 hover:font-bold'>Boats</button> 
+                <Link to='/MyDay'>
+                    <button className='text-lg hover:text-blue-500'>Event</button>
                 </Link>
-                <Link to='/Booked'>
-                    <button className='pl-36 hover:font-bold'>Booked</button>
+                <Link to='/Progress'>
+                    <button className='text-lg hover:text-blue-500'>Merch</button>
                 </Link>
-                <Link to='/Map'>
-                    <button className='pl-36 pr-24 hover:font-bold'>Map</button>
-                </Link>
-                
             </div>
-            <a className='img-boat'>
-                <img src="https://i.ibb.co/zNmLrXM/boat-icon.png" alt="boat-icon" border="0"></img>
-            </a>
         </nav>
-    )
+    );
 }
 
 export default Navbar;
